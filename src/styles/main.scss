@@ -1,0 +1,29 @@
+@use 'hero';
+@use 'variables';
+
+body {
+    background-image: url(../images/fundo-aniversario.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (max-width: 1024px) {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: variables.$corFundoResponsivo;
+            content: '';
+            opacity: 0.8;
+        }
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
